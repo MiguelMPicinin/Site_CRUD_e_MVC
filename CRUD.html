@@ -1,13 +1,104 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seminario</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Operações CRUD</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header, .footer {
+            background-color: #444;
+            height: 60px;
+        }
+        .footer {
+            height: 40px;
+            margin-top: 20px;
+        }
+        .content {
+            max-width: 60%;
+            margin: 0 auto;
+            text-align: left;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+        }
+        .image {
+            width: 60%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+        }
+        h2 {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+        p, li {
+            font-size: 20px;
+            color: #333;
+        }
+    </style>
 </head>
 <body>
+    <div class="header"></div>
     
+    <div class="content">
+        <h2>Introdução</h2>
+        <p>CRUD é um acrônimo que representa as quatro operações fundamentais realizadas em sistemas de gerenciamento de banco de dados ou qualquer aplicação que envolva a manipulação de dados. Essas operações são essenciais para a criação, leitura, atualização e exclusão de dados em sistemas e aplicações.</p>
+        
+        <h2>As Quatro Operações do CRUD</h2>
+        
+        <h3>Create (Criar)</h3>
+        <p>A operação de criação é utilizada para adicionar novos registros ou dados ao sistema.</p>
+        <p><strong>Exemplo:</strong> Inserir um novo usuário em um sistema de cadastro, ou criar um novo produto em um estoque.</p>
+        <p><strong>SQL:</strong> <code>INSERT INTO tabela (coluna1, coluna2) VALUES (valor1, valor2);</code></p>
+        <img src="img/create.png" alt="Operação Create" class="image">
+        
+        <h3>Read (Ler)</h3>
+        <p>A operação de leitura é usada para recuperar ou visualizar os dados existentes no sistema.</p>
+        <p><strong>Exemplo:</strong> Consultar a lista de produtos em um e-commerce ou verificar as informações de um usuário no sistema.</p>
+        <p><strong>SQL:</strong> <code>SELECT * FROM tabela WHERE condição;</code></p>
+        <img src="img/read.png" alt="Operação Read" class="image">
+        
+        <h3>Update (Atualizar)</h3>
+        <p>A operação de atualização é usada para modificar dados que já existem no sistema.</p>
+        <p><strong>Exemplo:</strong> Atualizar o endereço de um cliente ou a quantidade de um produto no estoque.</p>
+        <p><strong>SQL:</strong> <code>UPDATE tabela SET coluna1 = valor1 WHERE condição;</code></p>
+        <img src="img/update.png" alt="Operação Update" class="image">
+        
+        <h3>Delete (Deletar)</h3>
+        <p>A operação de exclusão serve para remover dados do sistema.</p>
+        <p><strong>Exemplo:</strong> Excluir um usuário de uma plataforma ou remover um produto que não está mais disponível.</p>
+        <p><strong>SQL:</strong> <code>DELETE FROM tabela WHERE condição;</code></p>
+        <img src="img/delete.png" alt="Operação Delete" class="image">
+        
+        <h2>Importância do CRUD</h2>
+        <ul>
+            <li><strong>Fundamental para a manipulação de dados:</strong> As operações CRUD são a base de quase todas as interações com bancos de dados.</li>
+            <li><strong>Flexibilidade:</strong> Permitem criar, ler, atualizar e deletar dados de forma simples e eficaz, atendendo a várias necessidades de sistemas e aplicações.</li>
+            <li><strong>Facilidade de manutenção:</strong> Tornam a manutenção de sistemas mais organizada e compreensível, já que os dados podem ser facilmente manipulados.</li>
+        </ul>
+        
+        <h2>Exemplo Prático</h2>
+        <p>Imagine um sistema de cadastro de usuários, onde é possível:</p>
+        <ul>
+            <li><strong>Criar:</strong> Um novo usuário com nome, email e senha.</li>
+            <li><strong>Ler:</strong> Os dados de todos os usuários cadastrados ou consultar um usuário específico.</li>
+            <li><strong>Atualizar:</strong> Os dados de um usuário, como o email ou a senha.</li>
+            <li><strong>Deletar:</strong> Um usuário que não precisa mais estar no sistema.</li>
+        </ul>
+        
+        <h2>Conclusão</h2>
+        <p>O CRUD é a base de muitas aplicações e sistemas modernos. Ele é simples, mas poderoso, e garante que os dados possam ser manipulados de maneira eficiente e segura. Entender como as operações CRUD funcionam é essencial para qualquer desenvolvedor ou profissional que trabalhe com bancos de dados e sistemas.</p>
+    </div>
+    
+    <div class="footer"></div>
 </body>
-<script src="script.js"></script>
 </html>
