@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Modelo</title>
+    <title>Padrão MVC</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,47 +11,86 @@
             padding: 0;
             background-color: #f4f4f4;
         }
-        .header {
+        .header, .footer {
             background-color: #444;
             height: 60px;
         }
+        .footer {
+            height: 40px;
+            margin-top: 20px;
+        }
         .content {
-            max-width: 70%;
+            max-width: 60%;
             margin: 0 auto;
             text-align: left;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
         }
         .image {
-            width: 70%;
+            width: 60%;
             height: auto;
             display: block;
             margin: 20px auto;
         }
         h2 {
-            font-size: 28px;
-            margin-left: 15px;
-        }
-        p {
-            font-size: 18px;
-            color: #333;
-            margin-left: 15px;
-        }
-        .footer {
-            background-color: #444;
-            height: 40px;
+            font-size: 30px;
             margin-top: 20px;
+        }
+        h3 {
+            font-size: 26px;
+        }
+        p, li {
+            font-size: 20px;
+            color: #333;
         }
     </style>
 </head>
 <body>
     <div class="header"></div>
+    
     <div class="content">
-        <img src="img/mvc2.png" alt="Imagem 1" class="image">
-        <h2>O que é MVC?</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-        <img src="img/MVC.jpg" alt="Imagem 2" class="image">
-        <h2>Não sei o que</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <h2>Introdução</h2>
+        <p>MVC (Model-View-Controller) é um padrão de arquitetura de software amplamente utilizado no desenvolvimento de aplicações, especialmente em sistemas que exigem interação com o usuário e manipulação de dados. O MVC organiza o código de forma estruturada e facilita a manutenção e escalabilidade do sistema, separando responsabilidades em três componentes principais.</p>
+        
+        <h2>Os Três Componentes do MVC</h2>
+        
+        <h3>Model (Modelo)</h3>
+        <p>O Model é a parte responsável pela lógica de negócios e acesso aos dados. Ele representa os dados da aplicação e as regras de como esses dados podem ser manipulados.</p>
+        <img src="img/mvc2.png" alt="Modelo MVC" class="image">
+        
+        <h3>View (Visão)</h3>
+        <p>A View é a interface do usuário. Ela é responsável por apresentar os dados ao usuário e fornecer a interface com a qual o usuário interage.</p>
+        <img src="img/mvc2.png" alt="Visão MVC" class="image">
+        
+        <h3>Controller (Controlador)</h3>
+        <p>O Controller é o intermediário entre o Model e a View. Ele recebe as ações do usuário na interface e decide como manipular as informações, interagindo com o Model e atualizando a View.</p>
+        <img src="img/mvc2.png" alt="Controlador MVC" class="image">
+        
+        <h2>Fluxo de Funcionamento do MVC</h2>
+        <p>O usuário interage com a View, por exemplo, preenchendo um formulário de cadastro. O Controller recebe a ação do usuário e decide o que fazer com os dados (validar, salvar, etc.). O Controller chama o Model para manipular os dados (inserir no banco, buscar informações, etc.). O Model processa os dados e retorna ao Controller. O Controller então atualiza a View com as informações mais recentes, como uma mensagem de confirmação ou uma página de erro.</p>
+        <img src="img/mvc2.png" alt="Fluxo MVC" class="image">
+        
+        <h2>Vantagens do Padrão MVC</h2>
+        <ul>
+            <li>Separação de responsabilidades: Ao dividir a aplicação em três componentes distintos (Model, View, Controller), fica mais fácil organizar o código, facilitando a manutenção e a colaboração entre desenvolvedores.</li>
+            <li>Facilidade de manutenção: Alterações em um componente (por exemplo, a interface de usuário) podem ser feitas sem afetar diretamente os outros componentes (Model ou Controller), permitindo que as modificações sejam mais rápidas e menos propensas a erros.</li>
+            <li>Escalabilidade: O padrão MVC facilita a expansão de funcionalidades, já que novos recursos podem ser adicionados sem grandes impactos nos componentes existentes.</li>
+            <li>Testabilidade: Cada componente do MVC pode ser testado isoladamente, o que facilita a criação de testes automatizados.</li>
+        </ul>
+        
+        <h2>Exemplo Prático</h2>
+        <p>Em um sistema de cadastro de usuários:</p>
+        <ul>
+            <li><strong>Model:</strong> Representa a tabela de usuários no banco de dados, contém métodos como criarUsuario(), atualizarUsuario(), buscarUsuarios().</li>
+            <li><strong>View:</strong> Apresenta um formulário HTML para cadastro de usuários, uma tabela que lista os usuários cadastrados.</li>
+            <li><strong>Controller:</strong> Recebe o envio do formulário de cadastro, valida os dados, chama o Model para salvar os dados no banco e então retorna uma resposta para a View (como uma página de confirmação ou erro).</li>
+        </ul>
+        
+        <h2>Conclusão</h2>
+        <p>O padrão MVC é uma forma eficiente e organizada de estruturar o código de uma aplicação, facilitando o desenvolvimento, manutenção e escalabilidade. Ele ajuda a separar as responsabilidades da aplicação em três camadas distintas, garantindo que o código seja mais modular, limpo e fácil de testar. Entender e aplicar o MVC é essencial para qualquer desenvolvedor que trabalhe com aplicações de software, especialmente na web.</p>
     </div>
+    
     <div class="footer"></div>
 </body>
 </html>
