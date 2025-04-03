@@ -34,6 +34,14 @@ h1 {
     color: #333;
 }
 
+/* Estilizando o parágrafo logo abaixo do título principal */
+p {
+    text-align: justify;
+    margin: 20px auto;
+    width: 80%;
+    font-size: 1rem;
+}
+
 /* Estilizando o container de cards */
 conteiner {
     display: flex;
@@ -48,10 +56,11 @@ conteiner {
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
-    width: 300px;
+    width: 500px;
     margin: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .card-MVC:hover, .card-CRUD:hover {
@@ -59,7 +68,15 @@ conteiner {
     transform: translateY(-5px);
 }
 
-/* Estilizando os títulos dos cards */
+/* Estilizando a imagem dentro dos cards */
+.card-MVC img, .card-CRUD img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* Estilizando os títulos dentro dos cards */
 .card-MVC h1, .card-CRUD h1 {
     font-size: 1.5rem;
     color: #333;
@@ -79,11 +96,35 @@ conteiner {
 .card-MVC a, .card-CRUD a {
     display: inline-block;
     margin-top: 10px;
+    padding: 12px 20px;
     text-decoration: none;
-    color: #007bff;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
     font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
+/* Efeito de hover nos links para parecerem botões */
 .card-MVC a:hover, .card-CRUD a:hover {
-    text-decoration: underline;
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Estilizando o layout responsivo */
+@media (max-width: 768px) {
+    conteiner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-MVC, .card-CRUD {
+        width: 80%;
+        margin: 10px 0;
+    }
+
+    p {
+        width: 90%;
+    }
 }
